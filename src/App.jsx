@@ -3,10 +3,10 @@ import componentImg from "./assets/components.png";
 import Header from "./components/Header.jsx";
 import CoreConcept from "./components/CoreConsept.jsx";
 import TabButton from "./components/TabButton.jsx";
-import { CORE_CONCEPTS } from "./data.js";
+import { CORE_CONCEPTS, EXAMPLES } from "./data.js";
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("Please Click a Button");
+  const [selectedTopic, setSelectedTopic] = useState("components");
 
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -43,14 +43,13 @@ function App() {
             <TabButton onSelect={() => handleSelect("props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("state")}>State</TabButton>
           </menu>
-          {selectedTopic && (
-            <div>
-              <h3>{selectedTopic}</h3>
-              <p>
-                {`You have selected the topic: ${selectedTopic}. This is where you can add more information about the topic.`}
-              </p>
-            </div>
-          )}
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
