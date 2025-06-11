@@ -19,18 +19,9 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            <CoreConcept
-              image={componentImg}
-              title="Components"
-              description="The core UI building block - compose the user interface by combining multiple components."
-            />
-            <CoreConcept
-              image={CORE_CONCEPTS[1].image}
-              title={CORE_CONCEPTS[1].title}
-              description={CORE_CONCEPTS[1].description}
-            />
-            <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            {CORE_CONCEPTS.map((conseptItem) => (
+              <CoreConcept {...conseptItem} />
+            ))}
           </ul>
         </section>
         <section id="examples">
