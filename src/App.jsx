@@ -1,5 +1,4 @@
 import { useState } from "react";
-import componentImg from "./assets/components.png";
 import Header from "./components/Header.jsx";
 import CoreConcept from "./components/CoreConsept.jsx";
 import TabButton from "./components/TabButton.jsx";
