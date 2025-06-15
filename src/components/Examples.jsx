@@ -42,6 +42,7 @@ export default function Examples() {
             </TabButton>
           </>
         }
+        ButtonContainer="menu"
       ></Tabs>
       {!selectedTopic ? (
         <p>Please select a topic</p>
