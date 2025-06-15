@@ -12,14 +12,14 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
             {CORE_CONCEPTS.map((conseptItem) => (
-              <CoreConcept {...conseptItem} />
+              <CoreConcept key={conseptItem.title} {...conseptItem} />
             ))}
           </ul>
         </section>
@@ -64,7 +64,7 @@ function App() {
           )}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
